@@ -13,7 +13,7 @@ data "aws_ami" "this" {
 
 resource "aws_instance" "this" {
   ami = data.aws_ami.this.id
-  instance_type = "t2.micro"
+  instance_type = "t4g.nano"
   tags = {
     Name = "test-spot"
   }
